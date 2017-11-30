@@ -3,7 +3,7 @@ This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at http://mozilla.org/MPL/2.0/.
 */
-/* globals Prefs, Filters, Grid, Page, Tiles, Updater, Transformation, Background, chrome, db, initDB, -length */
+/* globals Prefs, Filters, Grid, Page, Tiles, Updater, Transformation, Background, chrome, db, initDB, makeZip, readZip, -length */
 
 var HTML_NAMESPACE = 'http://www.w3.org/1999/xhtml';
 
@@ -322,11 +322,11 @@ var newTabTools = {
 			return;
 		case 'options-donate':
 		case 'options-backup':
-			chrome.runtime.sendMessage({name: 'Export:backup'});
+			makeZip();
 			return;
 		case 'options-restore':
 			let input = newTabTools.optionsPane.querySelector('#options-export input[type="file"]');
-			chrome.runtime.sendMessage({name: 'Import:restore', file: input.files[0]});
+			readZip(input.files[0]);
 			return;
 		case 'newtab-update-donate':
 			window.open('https://darktrojan.github.io/donate.html?newtabtools');

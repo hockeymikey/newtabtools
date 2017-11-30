@@ -1,4 +1,4 @@
-/* globals Prefs, Tiles, chrome, IDBKeyRange, db, initDB, waitForDB */
+/* globals Prefs, Tiles, chrome, IDBKeyRange, db, initDB */
 Promise.all([
 	Prefs.init(),
 	initDB()
