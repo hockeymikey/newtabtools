@@ -3,7 +3,7 @@ New Tab Tools add-on
 
 Releases
 --------
-Released versions can be downloaded from https://addons.mozilla.org/firefox/addon/new-tab-tools/
+Released versions can be downloaded from https://github.com/hockeymikey/newtabtools/releases
 
 Hacking
 -------
@@ -15,4 +15,4 @@ git clone git://github.com/darktrojan/newtabtools.git newtabtools@darktrojan.net
 
 Localizing
 ----------
-Send me a pull request, or try my new experiment in add-on localization, *Zoo*: https://zoo2translate.herokuapp.com/darktrojan/newtabtools
+Send me a pull request. 
